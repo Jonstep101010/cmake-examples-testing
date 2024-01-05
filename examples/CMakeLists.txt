@@ -8,6 +8,7 @@ include(CTest)
 add_subdirectory(simple-project)
 add_subdirectory(extended-project)
 add_subdirectory(extended-project-gtest)
+add_subdirectory(extended-unity)
 add_subdirectory(fetch)
 
 # add_subdirectory(root-usefile)
