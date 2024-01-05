@@ -1,4 +1,5 @@
-#include <Contact.hpp>
+#include "fmt/core.h"
+#include <Contact_gtest.hpp>
 
 #include <fmt/format.h>
 
@@ -8,6 +9,6 @@ int main() {
     // auto [mean, moment] = accumulate_vector(input);
 
     // fmt::print("Mean: {}, Moment: {}\n",  mean, moment);
-    fmt::print("Hello, World!\n");
+    fmt::print("Hello, gtest!\n");
     return 0;
 }

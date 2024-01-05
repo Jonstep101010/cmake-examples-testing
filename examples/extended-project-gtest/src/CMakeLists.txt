@@ -3,19 +3,19 @@
 
 # Optionally glob, but only for CMake 3.12 or later:
 # file(GLOB HEADER_LIST CONFIGURE_DEPENDS "${ModernCMakeExample_SOURCE_DIR}/include/modern/*.hpp")
-set(HEADER_LIST "${ModernCMakeExample_SOURCE_DIR}/include/Contact.hpp" "${ModernCMakeExample_SOURCE_DIR}/include/lib.hpp")
+set(HEADER_LIST "${ModernCMakeExampleGTest_SOURCE_DIR}/include/Contact_gtest.hpp")
 
 # Make an automatic library - will be static or dynamic based on user setting
-add_library(modern_library Contact.cpp lib.cpp ${HEADER_LIST})
+add_library(modern_library_gtest Contact_gtest.cpp ${HEADER_LIST})
 
 # We need this directory, and users of our library will need it too
-target_include_directories(modern_library PUBLIC ../include)
+target_include_directories(modern_library_gtest PUBLIC ../include)
 
 # This depends on (header only) boost
-target_link_libraries(modern_library PRIVATE Boost::boost)
+target_link_libraries(modern_library_gtest PRIVATE Boost::boost)
 
 # All users of this library will need at least C++11
-target_compile_features(modern_library PUBLIC cxx_std_11)
+target_compile_features(modern_library_gtest PUBLIC cxx_std_11)
 
 # IDEs should put the headers in a nice place
 source_group(

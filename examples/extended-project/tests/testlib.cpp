@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch.hpp>
-#include <modern/lib.hpp>
+#include <lib.hpp>
+#include <Contact.hpp>
 
 TEST_CASE( "Quick check", "[main]" ) {
     std::vector<double> values {1, 2., 3.};
@@ -8,4 +9,8 @@ TEST_CASE( "Quick check", "[main]" ) {
 
     REQUIRE( mean == 2.0 );
     REQUIRE( moment == Approx(4.666666) );
+}
+
+TEST_CASE( "ReturnsTrue", "[Contact]" ) {
+    REQUIRE(returnstrue() == true);
 }
