@@ -12,9 +12,3 @@ void tearDown(void) {
 void test_returnstrue(void) {
 	TEST_ASSERT(returnstrue());
 }
-
-int main(void) {
-	UNITY_BEGIN();
-	RUN_TEST(test_returnstrue);
-	return UNITY_END();
-}
